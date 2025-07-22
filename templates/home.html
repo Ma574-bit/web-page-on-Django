@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %} 
+
+{% block title %}หน้าแรก - ฟุตบอล{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+            <h1 class="display-4 fw-bold mb-3">ยินดีต้อนรับสู่เว็บไซต์ฟุตบอล</h1>
+            <p class="lead">แหล่งรวมความรู้ ข่าวสาร </p>
+            <a href="{% url 'about' %}" class="btn btn-success btn-lg mt-3">เรียนรู้เพิ่มเติมเกี่ยวกับเรา</a>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="{% static 'assets/img/ฟุตบอล.jpeg' %}" alt="ฟุตบอล" class="img-fluid rounded shadow" style="max-height: 320px;">
+            <div class="mt-2 fw-bold">
+                สร้างโดย: นายแทนไทย พันธูชาติ<br>
+                รหัส 6712732132<br>
+                สาขาวิทยาการคอมพิวเตอร์
+            </div>
+        </div>
+    </div>
+    <hr class="my-5">
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-success">
+                <div class="card-body">
+                    <h5 class="card-title">บทความความรู้</h5>
+                    <p class="card-text">ติดตามบทความและข่าวฟุตบอลที่รวดเร็ว</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-primary">
+                <div class="card-body">
+                    <h5 class="card-title">ข่าวสารและกิจกรรม</h5>
+                    <p class="card-text">อัปเดตข่าวสารเกี่ยวกับวงการฟุตบอล กิจกรรมต่างๆ</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-warning">
+                <div class="card-body">
+                    <h5 class="card-title">ติดต่อและให้คำปรึกษา</h5>
+                    <p class="card-text">สอบถามข้อมูลเกี่ยวกับฟุตบอลกับทีมงานของเรา</p>
+                    <a href="{% url 'contact' %}" class="btn btn-outline-warning mt-2">ติดต่อเรา</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

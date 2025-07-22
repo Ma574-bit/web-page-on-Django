@@ -1,0 +1,42 @@
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}เกี่ยวกับเรา{% endblock title %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="card-title mb-4 text-center"><img src="https://cdn-icons-png.flaticon.com/512/861/861512.png" alt="ฟุตบอล" style="width:36px;"> เกี่ยวกับเว็บไซต์ฟุตบอล</h2>
+                    <p class="lead">เว็บไซต์ฟุตบอลของเราถูกสร้างขึ้นเพื่อเป็นศูนย์กลางข้อมูล ข่าวสาร และความรู้เกี่ยวกับวงการฟุตบอลทั้งไทยและต่างประเทศ เรามุ่งมั่นนำเสนอเนื้อหาที่ถูกต้อง ทันสมัย และสร้างแรงบันดาลใจให้กับแฟนบอลทุกเพศทุกวัย</p>
+                    <div class="mb-4 text-center">
+                        <img src="{% static 'assets/img/liverpool.jpg' %}" alt="Liverpool" style="width:100%; max-width:480px; height:auto;" class="img-fluid rounded shadow mb-2">
+                        <div>สโมสรฟุตบอลลิเวอร์พูล (Liverpool FC)</div>
+                    </div>
+                    <hr>
+                    <h4>พันธกิจของเรา</h4>
+                    <ul>
+                        <li>นำเสนอข่าวสารฟุตบอลที่ถูกต้องและรวดเร็ว</li>
+                        <li>สนับสนุนและส่งเสริมวงการฟุตบอลไทยและสากล</li>
+                        <li>สร้างสังคมแห่งการแบ่งปันความรู้และประสบการณ์ฟุตบอล</li>
+                        <li>ให้ข้อมูลสถิติ ตารางการแข่งขัน และเกร็ดความรู้ที่น่าสนใจ</li>
+                    </ul>
+                    <hr>
+                    <h4>ทีมงานของเรา</h4>
+                    <ul>
+                        <li>นักข่าวและนักวิเคราะห์ฟุตบอลมืออาชีพ</li>
+                        <li>ทีมงานผู้ดูแลเว็บไซต์และโซเชียลมีเดีย</li>
+                        <li>แฟนบอลและผู้สนับสนุนจากทั่วประเทศ</li>
+                    </ul>
+                    <hr>
+                    <h4>ติดต่อเรา</h4>
+                    <p>หากมีข้อเสนอแนะหรือคำถามเกี่ยวกับฟุตบอล สามารถติดต่อเราได้ที่ <a href="mailto:footballnews@example.com">footballnews@example.com</a> หรือดูรายละเอียดเพิ่มเติมที่หน้า <a href="{% url 'contact' %}">ติดต่อเรา</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
