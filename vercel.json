@@ -2,25 +2,20 @@
     "version": 2,
     "builds": [
         {
-            "src": "vercel_deploy/wsgi.py",
-            "use": "@vercel/python"
-        },
-        {
-            "src": "build_files.sh",
-            "use": "@vercel/static-build",
+            "src": "Howlong/wsgi.py",
+            "use": "@vercel/python",
             "config": {
-                "distDir": "staticfiles_build"
+                "maxLambdaSize": "15mb"
             }
         }
     ],
     "routes": [
         {
-            "src": "/static/(.*)",
-            "dest": "/static/$1"
-        },
-        {
             "src": "/(.*)",
-            "dest": "vercel_deploy/wsgi.py"
+            "dest": "Howlong/wsgi.py"
         }
-    ]
+    ],
+    "env": {
+        "DJANGO_SETTINGS_MODULE": "Howlong.settings"
+    }
 }
